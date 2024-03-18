@@ -26,15 +26,4 @@ object DataStoreManager {
         }
     }
 
-//    suspend fun deleteAll(context: Context) {
-//        context.dataStore.edit { editor ->
-//            editor.clear()//borrar todos
-//        }
-//    }
-//
-//    suspend fun deleteSample(context: Context) {
-//        context.dataStore.edit { editor ->
-//            editor.remove(departmentkey)//borrar solo un dato
-//        }
-//    }
 }

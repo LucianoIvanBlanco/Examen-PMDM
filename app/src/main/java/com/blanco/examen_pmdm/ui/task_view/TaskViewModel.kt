@@ -20,9 +20,6 @@ class TaskViewModel : ViewModel() {
     private var _uiState: MutableLiveData<TaskUiState> = MutableLiveData(TaskUiState())
     val uiState: LiveData<TaskUiState> get() = _uiState
 
-    private var _uiState2: MutableStateFlow<TaskUiState> = MutableStateFlow(TaskUiState())
-    val uiState2: StateFlow<TaskUiState> get() = _uiState2
-
 
     fun getDepartment(context: Context) {
         viewModelScope.launch(Dispatchers.IO) {
@@ -34,11 +31,11 @@ class TaskViewModel : ViewModel() {
         }
     }
 
-    fun getHomeWork(userName: String) {
+    fun getTask(department: String) {
         _uiState.postValue(TaskUiState(isLoading = true))
 
         viewModelScope.launch(Dispatchers.IO) {
-            val response = DepartmentApi.service.getHomeWork(userName, "U-Tad")
+            val response = DepartmentApi.service.getTasks(department, "Luciano")
             if (response.isSuccessful) {
                 _uiState.postValue(TaskUiState(response = response.body()))
             } else {

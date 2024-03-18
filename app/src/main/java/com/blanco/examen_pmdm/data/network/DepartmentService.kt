@@ -7,9 +7,9 @@ import retrofit2.http.Header
 import retrofit2.http.Path
 
 interface DepartmentService {
-    @GET("task/{department}") // IMPORTANTE no poner \ al principip
-    suspend fun getHomeWork(
-        @Header("Luciano Blanco") userName: String, // Aqui los datos que tengamos que enviar
-        @Path("department") department: String   // el path que le pasamos a la URL
-    ): Response<List<TaskResponse>> // Objeto que nos devuelve
+    @GET("task/{department}")
+    suspend fun getTasks(
+        @Header("Authorization") authToken: String,
+        @Path("department") department: String
+    ): Response<List<TaskResponse>>
 }

@@ -32,9 +32,9 @@ class TaskActivity : AppCompatActivity() {
         }
 
         private fun observerViewModel() {
-            viewModel.department.observe(this) { userName ->
-                if (userName != null) {
-                    viewModel.getHomeWork(userName)
+            viewModel.department.observe(this) { department ->
+                if (department != null) {
+                    viewModel.getTask(department)
                 }
             }
 
@@ -43,29 +43,8 @@ class TaskActivity : AppCompatActivity() {
                 if (uiState.response != null) {
                     adapter.submitList(uiState.response)
                 }
-
-
-                if (uiState.isLoading) {
-                    //Mostrar carga
-                } else {
-                    //OCULTAR carga
-                }
-
-                if (uiState.isError) {
-                    //mostrar error
-                }
-            }
-
-
-            lifecycleScope.launch {
-                viewModel.uiState2.collect{response->
-                }
-
-                viewModel.uiState2.collect{ response->
-                }
             }
 
         }
-
 
     }
