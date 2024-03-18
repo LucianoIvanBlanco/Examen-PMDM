@@ -6,13 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".ui.initial_view.MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/et_department"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:ems="10"
+        android:hint="@string/dapartment_hint"
+        android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/btn_access"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/btn_acces"
+        app:layout_constraintEnd_toEndOf="@+id/et_department"
+        app:layout_constraintStart_toStartOf="@+id/et_department"
+        app:layout_constraintTop_toBottomOf="@+id/et_department" />
 </androidx.constraintlayout.widget.ConstraintLayout>

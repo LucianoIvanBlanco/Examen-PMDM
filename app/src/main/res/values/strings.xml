@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Examen-PMDM</string>
+    <string name="dapartment_hint">Departamento</string>
+    <string name="btn_acces">Acceder</string>
 </resources>
