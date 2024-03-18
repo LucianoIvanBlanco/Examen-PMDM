@@ -1,5 +1,6 @@
 package com.blanco.examen_pmdm.data.network
 
+import com.blanco.examen_pmdm.data.network.model.TaskResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Header
@@ -10,5 +11,5 @@ interface DepartmentService {
     suspend fun getHomeWork(
         @Header("Luciano Blanco") userName: String, // Aqui los datos que tengamos que enviar
         @Path("department") department: String   // el path que le pasamos a la URL
-    ): Response<List<HomeWorkResponse>> // Objeto que nos devuelve
+    ): Response<List<TaskResponse>> // Objeto que nos devuelve
 }
