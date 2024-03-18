@@ -1,5 +1,6 @@
 package com.blanco.examen_pmdm.ui.initial_view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -8,6 +9,7 @@ import com.blanco.examen_pmdm.R
 import com.blanco.examen_pmdm.databinding.ActivityMainBinding
 import com.blanco.examen_pmdm.databinding.ActivityTaskBinding
 import com.blanco.examen_pmdm.ui.task_view.TaskActivity
+
 
 class MainActivity : AppCompatActivity() {
 
